@@ -43,7 +43,7 @@ public class Paciente {
 		if (nombre == null || nombre.trim().isEmpty()){
 			throw new NullPointerException("ERROR: El nombre de un pacienciente no puede ser nulo o vacío.");
 		}else {
-			this.nombre = nombre;
+			this.nombre = formateaNombre(nombre);
 		}
 	}
 
