@@ -41,7 +41,7 @@ public class Paciente {
 
 	public void setNombre(String nombre) {
 		if (nombre == null || nombre.trim().isEmpty()){
-			throw new NullPointerException("ERROR: El nombre de un pacienciente no puede ser nulo o vacío.");
+			throw new NullPointerException("ERROR: El nombre de un paciente no puede ser nulo o vacío.");
 		}else {
 			this.nombre = formateaNombre(nombre);
 		}

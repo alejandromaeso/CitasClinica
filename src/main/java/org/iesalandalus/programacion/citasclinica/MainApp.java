@@ -132,7 +132,7 @@ public class MainApp {
 		}
 
 		if (citasFecha.length == 0 || !citasDisponibles) {
-			System.out.println("No hay citas para esta fecha :(");
+			System.out.println("No hay citas para esta fecha.");
 			System.out.println("");
 			Consola.mostrarMenu();
 			ejecutarOpcion(Consola.elegirOpcion());
@@ -154,7 +154,7 @@ public class MainApp {
 		System.out.println("------------------------");
 		if (listaCitas.getTamano() == 0) {
 			System.out.println("");
-			System.out.println("No hay citas para mostrar :(");
+			System.out.println("No hay citas para mostrar.");
 			System.out.println("");
 			Consola.mostrarMenu();
 			ejecutarOpcion(Consola.elegirOpcion());
