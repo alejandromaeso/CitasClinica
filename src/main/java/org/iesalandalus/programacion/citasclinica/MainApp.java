@@ -29,7 +29,7 @@ public class MainApp {
 		switch (opcion) {
 		case SALIR:
 			System.out.println("");
-			System.out.print("¡Sesión terminada!");
+			System.out.print("¡Hasta la próxima!");
 			break;
 		case INSERTAR_CITA:
 			insertarCita();
@@ -62,17 +62,16 @@ public class MainApp {
 			System.out.println("");
 			System.out.println(e.getMessage());
 			System.out.println("");
-			System.out.println("Por favor, vuelva a introducir los datos :(");
+			System.out.println("Por favor, vuelva a introducir los datos :");
 			System.out.println("");
 			insertarCita();
 		}
-
 	}
 
 	private static void buscarCita() throws OperationNotSupportedException {
 		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		LocalDateTime fecha = Consola.leerFechaHora();
-		Paciente paciente = new Paciente("prueba", "77777777J", "777777777");
+		Paciente paciente = new Paciente("prueba", "77242714C", "777777777");
 		Cita cita = new Cita(paciente, fecha);
 		Cita citaBuscada;
 		citaBuscada = listaCitas.buscar(cita);
@@ -98,7 +97,7 @@ public class MainApp {
 
 	private static void borrarCita() throws OperationNotSupportedException {
 		LocalDateTime fechaHora = Consola.leerFechaHora();
-		Paciente paciente = new Paciente("prueba", "77777777J", "777777777");
+		Paciente paciente = new Paciente("test", "77242714C", "666666666");
 		Cita cita = new Cita(paciente, fechaHora);
 		try {
 			listaCitas.borrar(cita);

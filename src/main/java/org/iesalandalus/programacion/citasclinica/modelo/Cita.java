@@ -15,8 +15,8 @@ public class Cita {
 	
 	public Cita(Paciente paciente, LocalDateTime fechaHora) {
 		super();
-		setFechaHora(fechaHora);
 		setPaciente(paciente);
+		setFechaHora(fechaHora);
 	}
 
 	//Constructor copia
@@ -40,6 +40,10 @@ public class Cita {
 	public void setFechaHora(LocalDateTime fechaHora) {
 		if (fechaHora == null) {
 			throw new NullPointerException("ERROR: La fecha y hora de una cita no puede ser nula.");
+		}
+		LocalDateTime fechaActual = LocalDateTime.now();
+		if(fechaHora.compareTo(fechaActual) < 0) {
+			throw new IllegalArgumentException("ERROR: No puedes introducir una fecha anterior a la actual.");
 		}
 		this.fechaHora = fechaHora;
 	}

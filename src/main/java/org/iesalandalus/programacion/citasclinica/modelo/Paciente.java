@@ -118,7 +118,7 @@ public class Paciente {
 			int numeroDni = Integer.parseInt(comparador.group(1));
 			String letraDni = comparador.group(2);
 			String[] letraValida = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
-			if (comparador.group(2).equals(letraValida[numeroDni%23])) {
+			if (letraDni.equals(letraValida[numeroDni%23])) {
 				verificador = true;
 			}
 		}
